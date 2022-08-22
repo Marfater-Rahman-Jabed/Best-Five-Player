@@ -22,12 +22,44 @@ function Selected(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
     if (playerArray.length < 5) {
         playerArray.push(playerName);
+        if (playerName == 'Leonel Messi') {
+            document.getElementById("myBtn1").disabled = true;
+        }
+        if (playerName == 'Naymar Jr.') {
+            document.getElementById("myBtn2").disabled = true;
+        }
+        if (playerName == 'CR. Ronaldo') {
+            document.getElementById("myBtn3").disabled = true;
+        }
+        if (playerName == 'Kylian Mbappe`') {
+            document.getElementById("myBtn4").disabled = true;
+        }
+        if (playerName == 'Arjen Robin') {
+            document.getElementById("myBtn5").disabled = true;
+        }
+        if (playerName == 'Mohamed Salah') {
+            document.getElementById("myBtn6").disabled = true;
+        }
+        if (playerName == 'Marcello') {
+            document.getElementById("myBtn7").disabled = true;
+        }
+        if (playerName == 'De Maria') {
+            document.getElementById("myBtn8").disabled = true;
+        }
+        if (playerName == 'Mesut Ozil') {
+            document.getElementById("myBtn9").disabled = true;
+        }
     }
     else {
         alert('You select already 5 players');
     }
     // console.log(playerArray);
     added(playerArray);
+
+
+
+
+
 }
 
 function commonFunction(elementId) {
