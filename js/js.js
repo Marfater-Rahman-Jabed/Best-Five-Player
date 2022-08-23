@@ -66,7 +66,13 @@ function commonFunction(elementId) {
     const Inputelement = document.getElementById(elementId);
     const InputelementString = Inputelement.value;
     const InputValue = parseFloat(InputelementString);
-    return InputValue;
+    if (isNaN(InputValue)) {
+        alert('Please Enter The valid Input');
+    }
+    else {
+        return InputValue;
+    }
+
 
 }
 
@@ -78,7 +84,10 @@ document.getElementById('btn-calculate-1').addEventListener('click', function ()
 
     // console.log(calculation);
     const ExpenseTotal = document.getElementById('player-expense');
-    ExpenseTotal.innerText = calculation;
+    if (!isNaN(calculation)) {
+        ExpenseTotal.innerText = calculation;
+    }
+
 });
 
 document.getElementById('btn-Calculate-total').addEventListener('click', function () {
@@ -92,5 +101,8 @@ document.getElementById('btn-Calculate-total').addEventListener('click', functio
     const LastExpense = ExpenseTotalValue + calculation2;
 
     const lastTotal = document.getElementById('Last-total');
-    lastTotal.innerText = LastExpense;
+    if (!isNaN(LastExpense)) {
+        lastTotal.innerText = LastExpense;
+    }
+
 })
